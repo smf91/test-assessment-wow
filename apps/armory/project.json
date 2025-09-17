@@ -1,27 +1,27 @@
 {
-  "name": "wow",
+  "name": "armory",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/wow/src",
+  "sourceRoot": "apps/armory/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/wow",
-        "browser": "apps/wow/src/main.ts",
+        "outputPath": "dist/apps/armory",
+        "browser": "apps/armory/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/wow/tsconfig.app.json",
+        "tsConfig": "apps/armory/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/wow/public"
+            "input": "apps/armory/public"
           }
         ],
-        "styles": ["apps/wow/src/styles.scss"]
+        "styles": ["apps/armory/src/styles.scss"]
       },
       "configurations": {
         "production": {
@@ -52,10 +52,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "wow:build:production"
+          "buildTarget": "armory:build:production"
         },
         "development": {
-          "buildTarget": "wow:build:development"
+          "buildTarget": "armory:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,7 +63,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "wow:build"
+        "buildTarget": "armory:build"
       }
     },
     "lint": {
@@ -73,7 +73,7 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "wow:build",
+        "buildTarget": "armory:build",
         "staticFilePath": "dist/apps/wow/browser",
         "spa": true
       }
