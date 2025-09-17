@@ -1,0 +1,11 @@
+@if (slot?.item) {
+  <div class="tooltip">
+    <strong [style.color]="qualityColor(slot.item.quality)">
+      {{ slot.item.name }}
+    </strong>
+    <div>iLvl: {{ slot.item.ilvl }}</div>
+    @for (stat of itemStats(); track stat.key) {
+      <div>{{ stat.key }}: {{ stat.value }}</div>
+    }
+  </div>
+}

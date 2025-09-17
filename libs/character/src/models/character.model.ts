@@ -1,22 +1,4 @@
-export enum EquipmentSlotEnum {
-  HEAD = 'HEAD',
-  NECK = 'NECK',
-  SHOULDER = 'SHOULDER',
-  BACK = 'BACK',
-  CHEST = 'CHEST',
-  WRIST = 'WRIST',
-  HANDS = 'HANDS',
-  WAIST = 'WAIST',
-  LEGS = 'LEGS',
-  FEET = 'FEET',
-  FINGER1 = 'FINGER1',
-  FINGER2 = 'FINGER2',
-  TRINKET1 = 'TRINKET1',
-  TRINKET2 = 'TRINKET2',
-  MAINHAND = 'MAINHAND',
-  OFFHAND = 'OFFHAND',
-  RANGED = 'RANGED',
-}
+import EquipmentSlotEnum from '@wow/ui';
 
 export interface Item {
   id: number;

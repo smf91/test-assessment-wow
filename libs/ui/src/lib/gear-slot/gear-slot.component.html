@@ -1,0 +1,17 @@
+<div
+  class="gear-slot"
+  [class.empty]="!slot.item"
+  [class.selected]="isSelected()"
+  (mouseenter)="onHover()"
+  (mouseleave)="onLeave()"
+>
+  @if (slot.item) {
+    <img [src]="slot.item.icon" [alt]="slot.item.name" />
+  } @else {
+    <img [src]="emptySlotIcon()" [alt]="slot.type" class="placeholder" />
+  }
+
+  @if (showTooltip()) {
+    <app-tooltip [slot]="slot" />
+  }
+</div>
