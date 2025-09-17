@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@wow/character": ["libs/character/src/index.ts"],
       "@wow/ui": ["libs/ui/src/index.ts"]
     }
   },

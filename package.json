@@ -11,6 +11,7 @@
     "lint:ui": "npx nx lint @wow/ui",
     "lint:armory": "npx nx lint @wow/armory",
     "storybook:ui": "npx nx storybook @wow/ui",
+    "storybook:character": "npx nx storybook @wow/character",
     "nx:reset": "nx reset"
   },
   "dependencies": {
@@ -21,7 +22,9 @@
     "@angular/forms": "~20.2.0",
     "@angular/platform-browser": "~20.2.0",
     "@angular/router": "~20.2.0",
+    "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
+    "wow-model-viewer": "^1.5.2",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
@@ -41,9 +44,10 @@
     "@nx/web": "21.5.2",
     "@nx/workspace": "21.5.2",
     "@schematics/angular": "~20.2.0",
-    "@storybook/addon-essentials": "8.4",
+    "@storybook/addon-essentials": "8.4.7",
     "@storybook/addon-interactions": "8.4",
-    "@storybook/angular": "8.4",
+    "@storybook/angular": "8.4.7",
+    "@storybook/core-server": "8.4.7",
     "@storybook/test": "8.4",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
@@ -54,7 +58,7 @@
     "eslint-config-prettier": "^10.0.0",
     "nx": "21.5.2",
     "prettier": "^2.6.2",
-    "storybook": "8.4",
+    "storybook": "8.4.7",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
     "typescript": "~5.9.2",

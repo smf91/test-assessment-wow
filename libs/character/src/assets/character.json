@@ -1,0 +1,32 @@
+{
+  "name": "Iamfreezler",
+  "race": "troll",
+  "gender": "male",
+  "class": "shaman",
+  "appearance": {
+    "skin": 2,
+    "face": 4,
+    "hair": 3,
+    "hairColor": 1,
+    "features": 0
+  },
+  "items": {
+    "HEAD": { "id": 40510, "enchant": 3817, "gems": [41398, 40003] },
+    "NECK": { "id": 44661 },
+    "SHOULDER": { "id": 40513, "enchant": 3808, "gems": [39999] },
+    "BACK": { "id": 40403, "enchant": 3831 },
+    "CHEST": { "id": 40508, "enchant": 3832, "gems": [40053, 40123, 40014] },
+    "WRIST": { "id": 40302, "enchant": 3845 },
+    "HANDS": { "id": 40504, "enchant": 3222, "gems": [40089] },
+    "WAIST": { "id": 40205, "gems": [40008, 40008, 40008] },
+    "LEGS": { "id": 40512, "enchant": 3823, "gems": [40086, 39996] },
+    "FEET": { "id": 40549, "enchant": 3232 },
+    "FINGER1": { "id": 40075 },
+    "FINGER2": { "id": 40474 },
+    "TRINKET1": { "id": 40684 },
+    "TRINKET2": { "id": 40256 },
+    "MAINHAND": { "id": 40384, "enchant": 3789 },
+    "OFFHAND": { "id": 40400 },
+    "RANGED": { "id": 40265 }
+  }
+}

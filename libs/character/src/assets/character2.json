@@ -1,0 +1,17 @@
+{
+  "name": "Iamfreezler",
+  "race": 7,
+  "gender": 1,
+  "class": "shaman",
+  "appearance": {
+    "skin": 2,
+    "face": 4,
+    "hair": 3,
+    "hairColor": 1,
+    "features": 0
+  },
+  "items": {
+    "HEAD": { "id": 1170 },
+    "SHOULDER": { "id": 4925 }
+  }
+}

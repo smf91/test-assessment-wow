@@ -5305,7 +5305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-essentials@npm:8.4":
+"@storybook/addon-essentials@npm:8.4.7":
   version: 8.4.7
   resolution: "@storybook/addon-essentials@npm:8.4.7"
   dependencies:
@@ -5395,7 +5395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/angular@npm:8.4":
+"@storybook/angular@npm:8.4.7":
   version: 8.4.7
   resolution: "@storybook/angular@npm:8.4.7"
   dependencies:
@@ -5506,6 +5506,15 @@ __metadata:
   peerDependencies:
     storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
   checksum: 10c0/7c1eb12fe2310a306f3c2f77a499c3a0caeb4694d4af8dde418f3b2d2ac8a3549b3f56cdc4629b9c15d79177c72e8668dd781a71bf257948f799b0e9cba201fa
+  languageName: node
+  linkType: hard
+
+"@storybook/core-server@npm:8.4.7":
+  version: 8.4.7
+  resolution: "@storybook/core-server@npm:8.4.7"
+  peerDependencies:
+    storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+  checksum: 10c0/6eca4bc2e9a723911bf623aaa2177c1ebf7f5665f799b4b4be1e07c9fb4d72e43d743dbdef8e5ce3392252e56d16e40548bc2e5c420d727fd4d50f2dd72a122e
   languageName: node
   linkType: hard
 
@@ -6685,9 +6694,10 @@ __metadata:
     "@nx/web": "npm:21.5.2"
     "@nx/workspace": "npm:21.5.2"
     "@schematics/angular": "npm:~20.2.0"
-    "@storybook/addon-essentials": "npm:8.4"
+    "@storybook/addon-essentials": "npm:8.4.7"
     "@storybook/addon-interactions": "npm:8.4"
-    "@storybook/angular": "npm:8.4"
+    "@storybook/angular": "npm:8.4.7"
+    "@storybook/core-server": "npm:8.4.7"
     "@storybook/test": "npm:8.4"
     "@swc-node/register": "npm:~1.9.1"
     "@swc/core": "npm:~1.5.7"
@@ -6696,14 +6706,16 @@ __metadata:
     angular-eslint: "npm:^20.2.0"
     eslint: "npm:^9.8.0"
     eslint-config-prettier: "npm:^10.0.0"
+    jquery: "npm:^3.7.1"
     nx: "npm:21.5.2"
     prettier: "npm:^2.6.2"
     rxjs: "npm:~7.8.0"
-    storybook: "npm:8.4"
+    storybook: "npm:8.4.7"
     ts-node: "npm:10.9.1"
     tslib: "npm:^2.3.0"
     typescript: "npm:~5.9.2"
     typescript-eslint: "npm:^8.40.0"
+    wow-model-viewer: "npm:^1.5.2"
     zone.js: "npm:~0.15.0"
   languageName: unknown
   linkType: soft
@@ -11134,6 +11146,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jquery@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "jquery@npm:3.7.1"
+  checksum: 10c0/808cfbfb758438560224bf26e17fcd5afc7419170230c810dd11f5c1792e2263e2970cca8d659eb84fcd9acc301edb6d310096e450277d54be4f57071b0c82d9
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -15239,7 +15258,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:8.4":
+"storybook@npm:8.4.7":
   version: 8.4.7
   resolution: "storybook@npm:8.4.7"
   dependencies:
@@ -16562,6 +16581,13 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10c0/e0e4a1ca27599c92a6ca4c32260e8a92e8a44f4ef6ef93f803f8ed823f486e0889fc0b93be4db59c8d51b3064951d25e43d434e95dc8c960cc3a63d65d00ba20
+  languageName: node
+  linkType: hard
+
+"wow-model-viewer@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "wow-model-viewer@npm:1.5.2"
+  checksum: 10c0/1e44d3e21b2a51aebd51842a5ef1f09503ccfb43e9b127a9b5408a0d4fdf69ca82f589301a7c301fa0c42e1f40b9c2dbf1f1e0b8589fb87b2f5552dc4a4f03a7
   languageName: node
   linkType: hard
 
