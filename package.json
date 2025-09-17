@@ -3,6 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "serve:armory": "npx nx serve @wow/armory",
+    "serve:ui": "npx nx serve @wow/ui",
+    "build:armory": "npx nx build @wow/armory",
+    "build:ui": "npx nx build @wow/ui",
+    "lint:ui": "npx nx lint @wow/ui",
+    "lint:armory": "npx nx lint @wow/armory",
+    "storybook:ui": "npx nx storybook @wow/ui",
+    "nx:reset": "nx reset"
+  },
   "dependencies": {
     "@angular/common": "~20.2.0",
     "@angular/compiler": "~20.2.0",
