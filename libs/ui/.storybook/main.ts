@@ -8,5 +8,15 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: [{ from: '../.storybook/public', to: '/' }],
+
+  webpackFinal: async (config) => {
+    config!.module!.rules!.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+      include: [/libs\/design-tokens/],
+    });
+    return config;
+  },
 };
+
 export default config;

@@ -3,8 +3,8 @@
   top: 110%;
   left: 50%;
   transform: translateX(-50%);
-  background: #222;
-  color: #fff;
+  background: var(--color-bg-tooltip);
+  color: var(--color-text-tooltip);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 10px;

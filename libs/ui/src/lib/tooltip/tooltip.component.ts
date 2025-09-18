@@ -1,13 +1,14 @@
 import { Component, Input, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { GearSlot, ItemData } from '../gear-slot/gear-slot.model';
 
 @Component({
   selector: 'app-tooltip',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './tooltip.component.html',
   styleUrl: './tooltip.component.scss',
+  standalone: true,
+  imports: [CommonModule],
 })
 export class TooltipComponent {
   @Input() slot!: GearSlot;
@@ -22,17 +23,13 @@ export class TooltipComponent {
   );
 
   qualityColor(quality: number) {
-    switch (quality) {
-      case 0:
-        return '#9d9d9d';
-      case 1:
-        return '#1eff00';
-      case 2:
-        return '#0070dd';
-      case 3:
-        return '#a335ee';
-      default:
-        return '#fff';
-    }
+    const map: Record<number, string> = {
+      0: 'var(--color-common)',
+      1: 'var(--color-uncommon)',
+      2: 'var(--color-rare)',
+      3: 'var(--color-epic)',
+      4: 'var(--color-legendary)',
+    };
+    return map[quality] ?? 'var(--color-text)';
   }
 }

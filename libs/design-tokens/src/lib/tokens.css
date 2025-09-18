@@ -1,0 +1,24 @@
+:root {
+  --color-bg: #222;
+  --color-text: #fff;
+
+  --color-common: #9d9d9d;
+  --color-uncommon: #1eff00;
+  --color-rare: #0070dd;
+  --color-epic: #a335ee;
+  --color-legendary: #ff8000;
+
+  --color-border-default: #555;
+  --color-border-selected: gold;
+  --color-bg-tooltip: #222;
+  --color-text-tooltip: #eee;
+}
+
+[data-theme='light'] {
+  --color-bg: #fff;
+  --color-text: #222;
+
+  --color-border-default: #555;
+  --color-bg-tooltip: #444;
+  --color-text-tooltip: #fff;
+}

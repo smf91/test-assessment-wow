@@ -1,0 +1,20 @@
+{
+  "name": "@wow/design-tokens",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/design-tokens/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/web:package",
+      "options": {
+        "outputPath": "dist/libs/design-tokens",
+        "entryFile": "src/index.css"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

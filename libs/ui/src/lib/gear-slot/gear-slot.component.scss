@@ -1,7 +1,7 @@
 .gear-slot {
   width: 36px;
   height: 36px;
-  border: 2px solid gray;
+  border: 2px solid var(--color-border-default);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@
 }
 
 .gear-slot.selected {
-  border-color: gold;
+  border-color: var(--color-border-selected);
 }
 
 .gear-slot img {

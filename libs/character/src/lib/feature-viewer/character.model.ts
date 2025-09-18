@@ -1,4 +1,4 @@
-import EquipmentSlotEnum from '@wow/ui';
+import { EquipmentSlotEnum } from '@wow/ui';
 
 export interface Item {
   id: number;

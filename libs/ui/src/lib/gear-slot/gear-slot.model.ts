@@ -16,6 +16,7 @@ export enum EquipmentSlotEnum {
   MAINHAND = 'MAINHAND',
   OFFHAND = 'OFFHAND',
   RANGED = 'RANGED',
+  SHIRT = 'SHIRT',
 }
 
 export interface ItemData {
@@ -36,6 +37,7 @@ export interface GearSlotMeta {
   type: EquipmentSlotEnum;
   label: string;
   emptyIcon: string;
+  id: number;
 }
 
 export const GearSlots: Record<EquipmentSlotEnum, GearSlotMeta> = {
@@ -43,85 +45,108 @@ export const GearSlots: Record<EquipmentSlotEnum, GearSlotMeta> = {
     type: EquipmentSlotEnum.HEAD,
     label: 'Head',
     emptyIcon: '/gear-slot/inventoryslot_head.jpg',
+    id: 1,
   },
   NECK: {
     type: EquipmentSlotEnum.NECK,
     label: 'Neck',
     emptyIcon: '/gear-slot/inventoryslot_neck.jpg',
+    id: 2,
   },
   SHOULDER: {
     type: EquipmentSlotEnum.SHOULDER,
     label: 'Shoulder',
     emptyIcon: '/gear-slot/inventoryslot_shoulder.jpg',
+    id: 3,
   },
-  BACK: {
-    type: EquipmentSlotEnum.BACK,
-    label: 'Back',
+  SHIRT: {
+    type: EquipmentSlotEnum.SHIRT,
+    label: 'Shirt',
     emptyIcon: '/gear-slot/inventoryslot_shirt.jpg',
+    id: 16,
   },
   CHEST: {
     type: EquipmentSlotEnum.CHEST,
     label: 'Chest',
     emptyIcon: '/gear-slot/inventoryslot_chest.jpg',
-  },
-  WRIST: {
-    type: EquipmentSlotEnum.WRIST,
-    label: 'Wrists',
-    emptyIcon: '/gear-slot/inventoryslot_wrists.jpg',
-  },
-  HANDS: {
-    type: EquipmentSlotEnum.HANDS,
-    label: 'Hands',
-    emptyIcon: '/gear-slot/inventoryslot_hands.jpg',
+    id: 5,
   },
   WAIST: {
     type: EquipmentSlotEnum.WAIST,
     label: 'Waist',
     emptyIcon: '/gear-slot/inventoryslot_waist.jpg',
+    id: 6,
   },
   LEGS: {
     type: EquipmentSlotEnum.LEGS,
     label: 'Legs',
     emptyIcon: '/gear-slot/inventoryslot_legs.jpg',
+    id: 7,
   },
   FEET: {
     type: EquipmentSlotEnum.FEET,
     label: 'Feet',
     emptyIcon: '/gear-slot/inventoryslot_feet.jpg',
+    id: 8,
+  },
+  WRIST: {
+    type: EquipmentSlotEnum.WRIST,
+    label: 'Wrists',
+    emptyIcon: '/gear-slot/inventoryslot_wrists.jpg',
+    id: 9,
+  },
+  HANDS: {
+    type: EquipmentSlotEnum.HANDS,
+    label: 'Hands',
+    emptyIcon: '/gear-slot/inventoryslot_hands.jpg',
+    id: 10,
   },
   FINGER1: {
     type: EquipmentSlotEnum.FINGER1,
     label: 'Finger',
     emptyIcon: '/gear-slot/inventoryslot_finger.jpg',
+    id: 11,
   },
   FINGER2: {
     type: EquipmentSlotEnum.FINGER2,
     label: 'Finger',
     emptyIcon: '/gear-slot/inventoryslot_finger.jpg',
+    id: 11,
   },
   TRINKET1: {
     type: EquipmentSlotEnum.TRINKET1,
     label: 'Trinket',
     emptyIcon: '/gear-slot/inventoryslot_trinket.jpg',
+    id: 12,
   },
   TRINKET2: {
     type: EquipmentSlotEnum.TRINKET2,
     label: 'Trinket',
     emptyIcon: '/gear-slot/inventoryslot_trinket.jpg',
+    id: 12,
+  },
+  BACK: {
+    type: EquipmentSlotEnum.BACK,
+    label: 'Back',
+    emptyIcon: '/gear-slot/inventoryslot_shirt.jpg',
+    id: 15,
   },
   MAINHAND: {
     type: EquipmentSlotEnum.MAINHAND,
     label: 'Main Hand',
     emptyIcon: '/gear-slot/inventoryslot_mainhand.jpg',
+    id: 21,
   },
   OFFHAND: {
     type: EquipmentSlotEnum.OFFHAND,
     label: 'Offhand',
     emptyIcon: '/gear-slot/inventoryslot_offhand.jpg',
+    id: 22,
   },
   RANGED: {
     type: EquipmentSlotEnum.RANGED,
     label: 'Ranged',
     emptyIcon: '/gear-slot/inventoryslot_offhand.jpg',
+    id: 17,
   },
 };

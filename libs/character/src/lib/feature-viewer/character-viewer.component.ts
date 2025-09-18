@@ -8,12 +8,23 @@ import {
   ViewChild,
   SimpleChanges,
 } from '@angular/core';
-import { Character } from '../../models';
 import { convertItems } from '../../utils';
+import { Character } from './character.model';
 
 @Component({
   selector: 'app-character-viewer',
   template: `<div id="model3d"></div>`,
+  styles: [
+    `
+      #model3d {
+        cursor: grab;
+      }
+
+      #model3d:active {
+        cursor: grabbing;
+      }
+    `,
+  ],
   standalone: true,
 })
 export class CharacterViewerComponent implements AfterViewInit, OnChanges {
