@@ -1,1 +1,1 @@
-export * from './lib/character/character';
+export * from './lib/character-viewer';

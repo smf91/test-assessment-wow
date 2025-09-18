@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { ArmoryComponent } from '../armory';
+import { ThemeService } from '../core';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
+  imports: [ArmoryComponent, RouterModule],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'wow';
+  constructor(public theme: ThemeService) {}
 }

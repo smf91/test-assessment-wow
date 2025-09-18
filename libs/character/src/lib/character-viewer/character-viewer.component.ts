@@ -16,7 +16,16 @@ import { Character } from './character.model';
   template: `<div id="model3d"></div>`,
   styles: [
     `
+      :host {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
       #model3d {
+        width: 100%;
+        height: 100%;
+        position: relative;
         cursor: grab;
       }
 

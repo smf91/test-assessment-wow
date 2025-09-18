@@ -21,7 +21,10 @@
             "input": "apps/armory/public"
           }
         ],
-        "styles": ["apps/armory/src/styles.scss"]
+        "styles": [
+          "apps/armory/src/styles.scss",
+          "libs/design-tokens/src/lib/tokens.css"
+        ]
       },
       "configurations": {
         "production": {
@@ -52,18 +55,21 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "armory:build:production"
+          "buildTarget": "@wow/armory:build:production"
         },
         "development": {
-          "buildTarget": "armory:build:development"
+          "buildTarget": "@wow/armory:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/armory/proxy.conf.js"
+      }
     },
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "armory:build"
+        "buildTarget": "@wow/armory:build"
       }
     },
     "lint": {
@@ -73,7 +79,7 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "armory:build",
+        "buildTarget": "@wow/armory:build",
         "staticFilePath": "dist/apps/wow/browser",
         "spa": true
       }

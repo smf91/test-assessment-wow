@@ -1,17 +1,26 @@
 <div
   class="gear-slot"
-  [class.empty]="!slot.item"
+  [class.empty]="!slot?.item"
   [class.selected]="isSelected()"
   (mouseenter)="onHover()"
   (mouseleave)="onLeave()"
 >
-  @if (slot.item) {
-    <img [src]="slot.item.icon" [alt]="slot.item.name" />
-  } @else {
-    <img [src]="emptySlotIcon()" [alt]="slot.type" class="placeholder" />
-  }
+  <ng-container *ngIf="slot; else nullSlot">
+    <img
+      *ngIf="slot.item; else emptySlot"
+      [src]="slot.item.icon"
+      [alt]="slot.item.name"
+    />
+    <ng-template #emptySlot>
+      <img [src]="emptySlotIcon()" [alt]="slot.type" class="placeholder" />
+    </ng-template>
 
-  @if (showTooltip()) {
-    <app-tooltip [slot]="slot" />
-  }
+    <app-tooltip *ngIf="showTooltip()" [slot]="slot" />
+  </ng-container>
+
+  <ng-template #nullSlot>
+    <div class="null-slot">
+      <img src="assets/null-slot.jpg" alt="NULL" />
+    </div>
+  </ng-template>
 </div>

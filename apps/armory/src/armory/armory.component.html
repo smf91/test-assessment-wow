@@ -1,0 +1,38 @@
+<ng-container *ngIf="store.character() as character; else loading">
+  <div class="character-gear">
+    <div class="gear-left">
+      <app-gear-slot
+        *ngFor="let slot of store.leftGears()"
+        [slot]="slot"
+      ></app-gear-slot>
+    </div>
+
+    <div class="gear-center">
+      <h2>{{character.name}}</h2>
+
+      <div class="character-wrapper" style="width: 300px; height: 267px;">
+        <app-character-viewer [character]="character"></app-character-viewer>
+      </div>
+    </div>
+
+    <div class="gear-right">
+      <app-gear-slot
+        *ngFor="let slot of store.rightGears()"
+        [slot]="slot"
+      ></app-gear-slot>
+    </div>
+  </div>
+
+  <div class="gear-bottom">
+    <app-gear-slot
+      *ngFor="let slot of store.bottomGears()"
+      [slot]="slot"
+    ></app-gear-slot>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div class="loader-fullscreen">
+    Loading character...
+  </div>
+</ng-template>

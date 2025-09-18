@@ -18,7 +18,7 @@ export const Default: Story = {
   },
   decorators: [
     (story) => ({
-      template: `<div style="width: 400px; height: 600px;">
+      template: `<div style="width: 400px; height: 267px;">
                    <app-character-viewer [character]="character"></app-character-viewer>
                  </div>`,
       props: story().props,
