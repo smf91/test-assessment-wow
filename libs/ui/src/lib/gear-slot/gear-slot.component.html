@@ -15,7 +15,7 @@
       <img [src]="emptySlotIcon()" [alt]="slot.type" class="placeholder" />
     </ng-template>
 
-    <app-tooltip *ngIf="showTooltip()" [slot]="slot" />
+    <lib-tooltip *ngIf="showTooltip()" [slot]="slot" />
   </ng-container>
 
   <ng-template #nullSlot>

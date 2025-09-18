@@ -1,10 +1,10 @@
 import { Component, Input, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { GearSlot, ItemData } from '../gear-slot/gear-slot.model';
+import { GearSlot } from '../gear-slot/gear-slot.model';
 
 @Component({
-  selector: 'app-tooltip',
+  selector: 'lib-tooltip',
   templateUrl: './tooltip.component.html',
   styleUrl: './tooltip.component.scss',
   standalone: true,
@@ -22,7 +22,7 @@ export class TooltipComponent {
       : []
   );
 
-  qualityColor(quality: number) {
+  qualityColor(quality: number): string {
     const map: Record<number, string> = {
       0: 'var(--color-common)',
       1: 'var(--color-uncommon)',

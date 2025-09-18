@@ -1,10 +1,12 @@
 import { Component, Input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { TooltipComponent } from '../tooltip';
+
 import { GearSlot, GearSlots } from './gear-slot.model';
-import { TooltipComponent } from '../tooltip/tooltip.component';
 
 @Component({
-  selector: 'app-gear-slot',
+  selector: 'lib-gear-slot',
   templateUrl: './gear-slot.component.html',
   styleUrls: ['./gear-slot.component.scss'],
   standalone: true,
@@ -16,11 +18,11 @@ export class GearSlotComponent {
 
   hovered = signal(false);
 
-  onHover = () => this.hovered.set(true);
-  onLeave = () => this.hovered.set(false);
+  onHover = (): void => this.hovered.set(true);
+  onLeave = (): void => this.hovered.set(false);
 
-  showTooltip = () => this.hovered();
-  isSelected = () => this.selectedSlot === this.slot;
+  showTooltip = (): boolean => this.hovered();
+  isSelected = (): boolean => this.selectedSlot === this.slot;
 
   emptySlotIcon(): string {
     if (!this.slot) return 'NULL';

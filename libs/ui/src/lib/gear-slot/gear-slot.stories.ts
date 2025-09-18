@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { GearSlotComponent } from './gear-slot.component';
 import { signal } from '@angular/core';
+
+import { GearSlotComponent } from './gear-slot.component';
 import { EquipmentSlotEnum, GearSlot, ItemData } from './gear-slot.model';
 
 const meta: Meta<GearSlotComponent> = {

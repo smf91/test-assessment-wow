@@ -1,10 +1,10 @@
 <ng-container *ngIf="store.character() as character; else loading">
   <div class="character-gear">
     <div class="gear-left">
-      <app-gear-slot
+      <lib-gear-slot
         *ngFor="let slot of store.leftGears()"
         [slot]="slot"
-      ></app-gear-slot>
+      ></lib-gear-slot>
     </div>
 
     <div class="gear-center">
@@ -16,18 +16,18 @@
     </div>
 
     <div class="gear-right">
-      <app-gear-slot
+      <lib-gear-slot
         *ngFor="let slot of store.rightGears()"
         [slot]="slot"
-      ></app-gear-slot>
+      ></lib-gear-slot>
     </div>
   </div>
 
   <div class="gear-bottom">
-    <app-gear-slot
+    <lib-gear-slot
       *ngFor="let slot of store.bottomGears()"
       [slot]="slot"
-    ></app-gear-slot>
+    ></lib-gear-slot>
   </div>
 </ng-container>
 

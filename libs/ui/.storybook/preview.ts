@@ -1,6 +1,7 @@
-import '../../design-tokens/src/lib/tokens.css';
-
+import { StoryFnAngularReturnType } from '@storybook/angular/dist/client/types';
 import type { Preview } from '@storybook/angular';
+
+import '../../design-tokens/src/lib/tokens.css';
 
 const preview: Preview = {
   globalTypes: {
@@ -19,7 +20,7 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (story, context) => {
+    (story, context): StoryFnAngularReturnType => {
       const theme = context.globals['theme'] || 'dark';
       document.body.setAttribute('data-theme', theme);
       return story();
