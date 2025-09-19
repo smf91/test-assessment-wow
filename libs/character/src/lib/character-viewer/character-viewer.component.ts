@@ -8,11 +8,13 @@ import {
   ViewChild,
   SimpleChanges,
 } from '@angular/core';
+
 import { convertItems } from '../../utils';
+
 import { Character } from './character.model';
 
 @Component({
-  selector: 'app-character-viewer',
+  selector: 'lib-character-viewer',
   template: `<div id="model3d"></div>`,
   styles: [
     `
@@ -47,16 +49,16 @@ export class CharacterViewerComponent implements AfterViewInit, OnChanges {
 
   ngAfterViewInit(): void {
     this._viewInitialized = true;
-    this.loadCharacter();
+    this._loadCharacter();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this._viewInitialized && changes['character'] && this.character) {
-      this.loadCharacter();
+      this._loadCharacter();
     }
   }
 
-  private async loadCharacter(): Promise<void> {
+  private async _loadCharacter(): Promise<void> {
     if (!this.character) return;
     const { appearance, items, race, gender } = this.character;
     const mappedItems = convertItems(items);

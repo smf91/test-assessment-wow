@@ -1,4 +1,5 @@
 import { EquipmentSlotEnum, GearSlots } from '@wow/ui';
+
 import type { Items } from '../lib/character-viewer';
 
 export function convertItems(items: Items): number[][] {
