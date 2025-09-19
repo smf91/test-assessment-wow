@@ -9,6 +9,7 @@ export default {
   '/api/getCharacter': {
     target: 'http://localhost:4200',
     secure: false,
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     bypass: (req, res) => {
       if (req.url === '/api/getCharacter') {
         const filePath = join(__dirname, '../../moks/character.json');

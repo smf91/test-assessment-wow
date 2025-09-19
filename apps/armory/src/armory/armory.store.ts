@@ -1,8 +1,9 @@
-import { inject, signal, effect, computed } from '@angular/core';
+import { inject, signal, effect, computed, Signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Character, Items } from '@wow/character';
 import { delay, tap } from 'rxjs';
+import { Character } from '@wow/character';
 import { EquipmentSlotEnum, GearSlot } from '@wow/ui';
+
 import { mapCharacterItemsToGearSlots } from './gear-mapper';
 
 export class ArmoryStore {
@@ -39,20 +40,22 @@ export class ArmoryStore {
   readonly character = signal<Character | null>(null);
 
   readonly allGear = computed<GearSlot[]>(() =>
-    this.character() ? mapCharacterItemsToGearSlots(this.character()!) : []
+    this.character()
+      ? mapCharacterItemsToGearSlots(this.character() as Character)
+      : []
   );
 
-  get leftGears() {
+  get leftGears(): Signal<GearSlot[]> {
     return computed(() =>
       this.allGear().filter((g) => this._leftSlots.includes(g.type))
     );
   }
-  get rightGears() {
+  get rightGears(): Signal<GearSlot[]> {
     return computed(() =>
       this.allGear().filter((g) => this._rightSlots.includes(g.type))
     );
   }
-  get bottomGears() {
+  get bottomGears(): Signal<GearSlot[]> {
     return computed(() =>
       this.allGear().filter((g) => this._bottomSlots.includes(g.type))
     );
@@ -65,7 +68,7 @@ export class ArmoryStore {
     });
   }
 
-  async loadGear(characterId?: string) {
+  loadGear(): void {
     //INFO  заглушка
     const url = '/api/getCharacter';
     this._http

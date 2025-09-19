@@ -7,7 +7,7 @@ export type Theme = 'light' | 'dark';
 export class ThemeService {
   current = signal<Theme>('dark');
 
-  setTheme(theme: Theme) {
+  setTheme(theme: Theme): void {
     this.current.set(theme);
     document.body.setAttribute('data-theme', theme);
   }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
 import { ArmoryComponent } from '../armory';
 import { ThemeService } from '../core';
 
@@ -10,5 +11,5 @@ import { ThemeService } from '../core';
   styleUrl: './app.scss',
 })
 export class App {
-  constructor(public theme: ThemeService) {}
+  public theme = inject(ThemeService);
 }

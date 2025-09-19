@@ -1,4 +1,4 @@
-import { Character, Items } from '@wow/character';
+import { Character } from '@wow/character';
 import { GearSlot, EquipmentSlotEnum, GearSlots, ItemData } from '@wow/ui';
 
 export function mapCharacterItemsToGearSlots(character: Character): GearSlot[] {

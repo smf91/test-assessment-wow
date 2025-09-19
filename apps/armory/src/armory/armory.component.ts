@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { CharacterViewerComponent } from '@wow/character';
 import { GearSlotComponent } from '@wow/ui';
-import { ArmoryStore } from './armory.store';
 import { HttpClientModule } from '@angular/common/http';
+
+import { ArmoryStore } from './armory.store';
 
 @Component({
   selector: 'app-armory',
