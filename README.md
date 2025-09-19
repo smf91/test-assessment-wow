@@ -19,7 +19,7 @@ Goal — prototype a character window: 3D model with equipment, item slots, and 
 
 ```bash
 git clone git@github.com:smf91/test-assessment-wow.git
-cd <repo>
+cd test-assessment-wow
 yarn install
 ```
 
