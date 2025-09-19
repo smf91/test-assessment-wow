@@ -1,7 +1,7 @@
 {
   "name": "@wow/source",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "serve:armory": "npx nx serve @wow/armory",

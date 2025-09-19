@@ -61,13 +61,6 @@ export class ArmoryStore {
     );
   }
 
-  constructor() {
-    effect(() => {
-      console.log('character updated:', this.character());
-      console.log('items updated:', this.allGear());
-    });
-  }
-
   loadGear(): void {
     //INFO  заглушка
     const url = '/api/getCharacter';
